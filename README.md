@@ -1,54 +1,25 @@
-<!doctype html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <title>サービス紹介</title>
-  <link rel="stylesheet" href="style1.css">
-</head>
-<body>
+# サービス紹介サイト
 
-<section class="services">
-  <h2>サービス紹介</h2>
-  <div class="service-list">
+Web制作に関する6つのサービスをまとめて紹介する、1ページだけのシンプルなWebサイトです。
 
-    <div class="service">
-      <h3>Webサイト制作</h3>
-      <p>レスポンシブ対応で成果につながるサイトを制作します。</p>
-      <button>詳しく見る</button>
-    </div>
+## このサイトは何か
 
-    <div class="service">
-      <h3>EC構築</h3>
-      <p>小規模から本格運用まで対応します。</p>
-      <button>詳しく見る</button>
-    </div>
+お客さまに「どんなことを頼めるのか」をひと目で伝えるためのページです。次の6つのサービスを紹介しています。
 
-    <div class="service">
-      <h3>SEO/コンテンツ</h3>
-      <p>検索順位向上のための戦略提案を行います。</p>
-      <button>詳しく見る</button>
-    </div>
+1. Webサイト制作
+2. EC構築
+3. SEO/コンテンツ
+4. LP/広告運用
+5. ブランド設計
+6. 運用・保守
 
-    <div class="service">
-      <h3>LP/広告運用</h3>
-      <p>広告効果を最大化するLPを制作します。</p>
-      <button>詳しく見る</button>
-    </div>
+## ファイル構成
 
-    <div class="service">
-      <h3>ブランド設計</h3>
-      <p>一貫性のあるブランド体験を設計します。</p>
-      <button>詳しく見る</button>
-    </div>
+| ファイル | 役割 |
+| --- | --- |
+| `index.html` | サイト本体（ページの中身） |
+| `README.md` | このプロジェクトの説明 |
 
-    <div class="service">
-      <h3>運用・保守</h3>
-      <p>サイト更新やセキュリティ対策までサポートします。</p>
-      <button>詳しく見る</button>
-    </div>
+## 見かた
 
-  </div>
-</section>
-
-</body>
-</html>
+`index.html` をブラウザで開くと表示できます。
