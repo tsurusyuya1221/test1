@@ -19,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%; /* スマホを横向きにしたとき文字が勝手に拡大されないようにする */
 }
 
 /* 固定ヘッダーに飛び先の見出しが隠れないようにする */
@@ -31,7 +32,43 @@ body {
   font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", Meiryo, sans-serif;
   color: var(--color-text);
   background: var(--color-bg);
-  line-height: 1.7;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  overflow-wrap: anywhere; /* 長い英数字（メールアドレス等）がはみ出さないようにする */
+}
+
+/* ===== 文字の読みやすさ ===== */
+/* 日本語を文節で折り返し、「す。」だけが次の行に残るのを防ぐ */
+h1, h2, h3, p, dd {
+  word-break: auto-phrase;
+  text-wrap: pretty;
+}
+
+/* 見出しは行間を詰めて、大きさで階層（h1 > h2 > h3）が分かるようにする */
+h1, h2, h3 {
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+}
+
+/* セクション見出し（h2）の共通デザイン */
+.services h2,
+.details h2,
+.contact h2 {
+  margin: 0 0 32px;
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+.services h2::after,
+.details h2::after,
+.contact h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin: 12px auto 0;
+  background: var(--color-accent);
+  border-radius: 2px;
 }
 
 /* ===== サービス紹介 ===== */
@@ -39,12 +76,6 @@ body {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 56px 20px;
-}
-
-.services h2 {
-  margin: 0 0 32px;
-  text-align: center;
-  font-size: 1.75rem;
 }
 
 /* カードの並び：PCは3列 */
@@ -202,11 +233,6 @@ body {
   text-align: center;
 }
 
-.contact h2 {
-  margin: 0 0 16px;
-  font-size: 1.75rem;
-}
-
 .contact-list {
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -259,6 +285,13 @@ body {
     font-size: 1.6rem;
   }
 
+  .services h2,
+  .details h2,
+  .contact h2 {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+  }
+
   .contact-list {
     grid-template-columns: 1fr;
     gap: 4px;
@@ -275,12 +308,6 @@ body {
   max-width: 860px;
   margin: 0 auto;
   padding: 24px 20px 56px;
-}
-
-.details h2 {
-  margin: 0 0 32px;
-  text-align: center;
-  font-size: 1.75rem;
 }
 
 .detail-list {
