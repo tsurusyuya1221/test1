@@ -106,3 +106,156 @@ body {
     padding: 40px 16px;
   }
 }
+
+/* ===== 共通の内側幅 ===== */
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== ヘッダー ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 64px;
+}
+
+.site-name {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.site-nav a {
+  white-space: nowrap;
+  color: var(--color-muted);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.site-nav a:hover {
+  color: var(--color-accent);
+}
+
+/* ===== ヒーロー ===== */
+.hero {
+  padding: 88px 0;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, #1e3a8a, var(--color-accent));
+}
+
+.hero h1 {
+  margin: 0 0 16px;
+  font-size: 2.25rem;
+  line-height: 1.4;
+}
+
+.hero p {
+  margin: 0 auto 32px;
+  max-width: 640px;
+  font-size: 1.05rem;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 14px 32px;
+  font-weight: bold;
+  color: var(--color-accent);
+  background: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+/* ===== お問い合わせ ===== */
+.contact {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 56px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  margin: 0 0 16px;
+  font-size: 1.75rem;
+}
+
+.contact-list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 12px 24px;
+  margin: 24px 0 0;
+  padding: 28px;
+  text-align: left;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.contact-list dt {
+  font-weight: bold;
+}
+
+.contact-list dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+/* ===== フッター ===== */
+.site-footer {
+  padding: 24px 20px;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #cbd2d9;
+  background: #1f2933;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .site-name {
+    font-size: 1rem;
+  }
+
+  .site-nav {
+    gap: 12px;
+    font-size: 0.875rem;
+  }
+
+  .hero {
+    padding: 56px 0;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .contact-list {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 20px;
+  }
+
+  .contact-list dd {
+    margin-bottom: 12px;
+  }
+}
