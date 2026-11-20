@@ -1,54 +1,61 @@
-<!doctype html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <title>サービス紹介</title>
-  <link rel="stylesheet" href="style1.css">
-</head>
-<body>
+# サービス紹介サイト
 
-<section class="services">
-  <h2>サービス紹介</h2>
-  <div class="service-list">
+Web制作に関する6つのサービスをまとめて紹介する、1ページだけのシンプルなWebサイトです。
 
-    <div class="service">
-      <h3>Webサイト制作</h3>
-      <p>レスポンシブ対応で成果につながるサイトを制作します。</p>
-      <button>詳しく見る</button>
-    </div>
+## 公開URL
 
-    <div class="service">
-      <h3>EC構築</h3>
-      <p>小規模から本格運用まで対応します。</p>
-      <button>詳しく見る</button>
-    </div>
+**https://tsurusyuya1221.github.io/test1/**
 
-    <div class="service">
-      <h3>SEO/コンテンツ</h3>
-      <p>検索順位向上のための戦略提案を行います。</p>
-      <button>詳しく見る</button>
-    </div>
+GitHub Pages で公開します。この URL をそのまま人に送れば、ブラウザやスマホで見てもらえます。
 
-    <div class="service">
-      <h3>LP/広告運用</h3>
-      <p>広告効果を最大化するLPを制作します。</p>
-      <button>詳しく見る</button>
-    </div>
+> ※ この URL は、下の「GitHub Pages の公開設定」が済むと表示されるようになります。
 
-    <div class="service">
-      <h3>ブランド設計</h3>
-      <p>一貫性のあるブランド体験を設計します。</p>
-      <button>詳しく見る</button>
-    </div>
+## このサイトは何か
 
-    <div class="service">
-      <h3>運用・保守</h3>
-      <p>サイト更新やセキュリティ対策までサポートします。</p>
-      <button>詳しく見る</button>
-    </div>
+お客さまに「どんなことを頼めるのか」をひと目で伝えるためのページです。次の6つのサービスを紹介しています。
 
-  </div>
-</section>
+1. Webサイト制作
+2. EC構築
+3. SEO/コンテンツ
+4. LP/広告運用
+5. ブランド設計
+6. 運用・保守
 
-</body>
-</html>
+## ファイル構成
+
+| ファイル | 役割 |
+| --- | --- |
+| `index.html` | サイト本体（ページの中身） |
+| `style1.css` | 見た目（カード型レイアウト・PC3列／スマホ1列） |
+| `README.md` | このプロジェクトの説明 |
+| `.nojekyll` | GitHub Pages でファイルを加工せずそのまま公開するための空ファイル |
+
+## 見かた
+
+`index.html` をブラウザで開くと表示できます。
+
+## あとで直す場所（仮の文言）
+
+事業者名・連絡先などはまだ決まっていないため、仮の文言を入れています。
+`index.html` の中で次の印を検索すると、直す場所がすべて見つかります。
+
+- `TODO(仮)` … HTMLコメント（ブラウザには表示されません）
+- `【仮】` … 画面に表示される仮の文言
+
+## GitHub Pages の公開設定
+
+1. この変更を `main` ブランチに取り込む（プルリクエストをマージ）
+2. リポジトリを公開（Public）にする … 無料プランでは private リポジトリを Pages で公開できません  
+   Settings → General → 一番下の「Danger Zone」→ Change repository visibility
+3. Settings → Pages → 「Build and deployment」で
+   - Source: **Deploy from a branch**
+   - Branch: **main** / **/(root)** を選んで Save
+4. 1〜2分待ってから、上の公開URLを開いて表示を確認する
+
+## 公開前チェック（実施済み）
+
+- ページ内リンク 16個すべて飛び先あり（リンク切れ 0）
+- `style1.css` の読み込み OK、エラー 0
+- HTMLタグの閉じ忘れ 0、id の重複 0
+- PC幅（1280px）・スマホ幅（375px / iPhone 13）で横はみ出しなし
+- 仮の文言が残っている：`【仮】` 14か所、`TODO(仮)` 5か所 → 内容が決まったら差し替え
