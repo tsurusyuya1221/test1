@@ -17,6 +17,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* 固定ヘッダーに飛び先の見出しが隠れないようにする */
+[id] {
+  scroll-margin-top: 80px;
+}
+
 body {
   margin: 0;
   font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", Meiryo, sans-serif;
@@ -72,7 +81,7 @@ body {
   flex-grow: 1; /* ボタンの位置をカードの下端にそろえる */
 }
 
-.service button {
+.service .button {
   align-self: flex-start;
   padding: 10px 20px;
   font: inherit;
@@ -81,10 +90,11 @@ body {
   background: var(--color-accent);
   border: none;
   border-radius: 999px;
+  text-decoration: none;
   cursor: pointer;
 }
 
-.service button:hover {
+.service .button:hover {
   background: var(--color-accent-dark);
 }
 
@@ -257,5 +267,62 @@ body {
 
   .contact-list dd {
     margin-bottom: 12px;
+  }
+}
+
+/* ===== サービス詳細 ===== */
+.details {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 24px 20px 56px;
+}
+
+.details h2 {
+  margin: 0 0 32px;
+  text-align: center;
+  font-size: 1.75rem;
+}
+
+.detail-list {
+  display: grid;
+  gap: 20px;
+}
+
+.detail {
+  padding: 24px 28px;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius);
+}
+
+/* 「詳しく見る」で飛んできた項目を目立たせる */
+.detail:target {
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+}
+
+.detail h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.detail p {
+  margin: 0 0 12px;
+  color: var(--color-muted);
+}
+
+.back-link {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--color-accent);
+}
+
+@media (max-width: 600px) {
+  .details {
+    padding: 16px 16px 40px;
+  }
+
+  .detail {
+    padding: 20px;
   }
 }
